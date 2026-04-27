@@ -17,7 +17,8 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
-    private String email;
+    @Column(nullable = false)
+    private String password; // Сюда будем писать хэш
 
-    // В будущем здесь будут связи с привычками и долгами
+    private String email;
 }
